@@ -26,8 +26,7 @@ public class RenderPeridot extends MobRenderer<EntityPeridot, ModelRuby<EntityPe
 
     @Override
     protected void preRenderCallback(EntityPeridot entitylivingbaseIn, MatrixStack matrixStackIn, float partialTickTime) {
-        matrixStackIn.scale(.8f, .85f, .8f);
-        super.preRenderCallback(entitylivingbaseIn, matrixStackIn, partialTickTime);
+        matrixStackIn.scale(0.95F, 1.15F, 0.95F);        super.preRenderCallback(entitylivingbaseIn, matrixStackIn, partialTickTime);
     }
 
     @Override

@@ -27,6 +27,7 @@ public class RenderMelanite extends MobRenderer<EntityMelanite, ModelGarnet<Enti
 
     @Override
     protected void preRenderCallback(EntityMelanite entitylivingbaseIn, MatrixStack matrixStackIn, float partialTickTime) {
+        matrixStackIn.scale(1.2F, 1.3F, 1.2F);
         super.preRenderCallback(entitylivingbaseIn, matrixStackIn, partialTickTime);
     }
 

@@ -5,6 +5,7 @@ import com.gempire.client.entity.model.ModelSapphire;
 import com.gempire.client.entity.model.ModelZircon;
 import com.gempire.client.entity.render.layers.*;
 import com.gempire.entities.gems.EntitySapphire;
+import com.gempire.entities.gems.EntityTourmaline;
 import com.gempire.entities.gems.EntityZircon;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
@@ -25,7 +26,11 @@ public class RenderZircon extends MobRenderer<EntityZircon, ModelZircon<EntityZi
         this.addLayer(new GemPlacementLayer(this));
         this.addLayer(new VisorLayer(this));
     }
-
+    @Override
+    protected void preRenderCallback(EntityZircon entitylivingbaseIn, MatrixStack matrixStackIn, float partialTickTime) {
+        matrixStackIn.scale(1.2F, 1.2F, 1.2F);
+        super.preRenderCallback(entitylivingbaseIn, matrixStackIn, partialTickTime);
+    }
     @Override
     public ResourceLocation getEntityTexture(EntityZircon entity) {
         return new ResourceLocation(Gempire.MODID+":textures/entity/zircon/blank.png");

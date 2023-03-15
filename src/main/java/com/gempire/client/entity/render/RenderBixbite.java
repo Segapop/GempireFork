@@ -26,6 +26,7 @@ public class RenderBixbite extends MobRenderer<EntityBixbite, ModelBixbite<Entit
 
     @Override
     protected void preRenderCallback(EntityBixbite entitylivingbaseIn, MatrixStack matrixStackIn, float partialTickTime) {
+        matrixStackIn.scale(1.0F, 1.1F, 1.0F);
         super.preRenderCallback(entitylivingbaseIn, matrixStackIn, partialTickTime);
     }
 

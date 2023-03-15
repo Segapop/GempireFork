@@ -27,6 +27,7 @@ public class RenderLapis extends MobRenderer<EntityLapis, ModelLapis<EntityLapis
 
     @Override
     protected void preRenderCallback(EntityLapis entitylivingbaseIn, MatrixStack matrixStackIn, float partialTickTime) {
+        matrixStackIn.scale(0.9F, 0.95F, 0.9F);
         super.preRenderCallback(entitylivingbaseIn, matrixStackIn, partialTickTime);
     }
 

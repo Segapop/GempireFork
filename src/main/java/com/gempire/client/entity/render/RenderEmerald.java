@@ -27,6 +27,7 @@ public class RenderEmerald extends MobRenderer<EntityEmerald, ModelEmerald<Entit
 
     @Override
     protected void preRenderCallback(EntityEmerald entitylivingbaseIn, MatrixStack matrixStackIn, float partialTickTime) {
+        matrixStackIn.scale(1.25F, 1.35F, 1.25F);
         super.preRenderCallback(entitylivingbaseIn, matrixStackIn, partialTickTime);
     }
 

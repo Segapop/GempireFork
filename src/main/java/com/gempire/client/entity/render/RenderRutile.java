@@ -27,6 +27,7 @@ public class RenderRutile extends MobRenderer<EntityRutile, ModelRutile<EntityRu
 
     @Override
     protected void preRenderCallback(EntityRutile entitylivingbaseIn, MatrixStack matrixStackIn, float partialTickTime) {
+        matrixStackIn.scale(0.95F, 1.0F, 0.95F);
         super.preRenderCallback(entitylivingbaseIn, matrixStackIn, partialTickTime);
     }
 

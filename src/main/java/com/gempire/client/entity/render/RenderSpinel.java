@@ -27,6 +27,7 @@ public class RenderSpinel extends MobRenderer<EntitySpinel, ModelSpinel<EntitySp
 
     @Override
     protected void preRenderCallback(EntitySpinel entitylivingbaseIn, MatrixStack matrixStackIn, float partialTickTime) {
+        matrixStackIn.scale(0.95F, 1.0F, 0.95F);
         super.preRenderCallback(entitylivingbaseIn, matrixStackIn, partialTickTime);
     }
 

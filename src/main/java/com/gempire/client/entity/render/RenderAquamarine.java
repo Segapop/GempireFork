@@ -27,10 +27,8 @@ public class RenderAquamarine extends MobRenderer<EntityAquamarine, ModelAquamar
 
     @Override
     protected void preRenderCallback(EntityAquamarine entitylivingbaseIn, MatrixStack matrixStackIn, float partialTickTime) {
-        matrixStackIn.scale(.8f, .85f, .8f);
-        super.preRenderCallback(entitylivingbaseIn, matrixStackIn, partialTickTime);
+        matrixStackIn.scale(0.6F, 0.65F, 0.6F);        super.preRenderCallback(entitylivingbaseIn, matrixStackIn, partialTickTime);
     }
-
     @Override
     public ResourceLocation getEntityTexture(EntityAquamarine entity) {
         return new ResourceLocation(Gempire.MODID+":textures/entity/aquamarine/blank.png");

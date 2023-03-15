@@ -26,6 +26,7 @@ public class RenderBismuth extends MobRenderer<EntityBismuth, ModelBismuth<Entit
 
     @Override
     protected void preRenderCallback(EntityBismuth entitylivingbaseIn, MatrixStack matrixStackIn, float partialTickTime) {
+        matrixStackIn.scale(0.9F, 1.0F, 0.9F);
         super.preRenderCallback(entitylivingbaseIn, matrixStackIn, partialTickTime);
     }
 

@@ -3,6 +3,7 @@ package com.gempire.client.entity.render;
 import com.gempire.Gempire;
 import com.gempire.client.entity.model.ModelSpodumene;
 import com.gempire.client.entity.render.layers.*;
+import com.gempire.entities.gems.EntitySpinel;
 import com.gempire.entities.gems.EntitySpodumene;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
@@ -21,6 +22,11 @@ public class RenderSpodumene extends MobRenderer<EntitySpodumene, ModelSpodumene
         this.addLayer(new SpodumeneHairLayer(this));
         this.addLayer(new OutfitLayer(this));
         this.addLayer(new InsigniaLayer(this));
+    }
+    @Override
+    protected void preRenderCallback(EntitySpodumene entitylivingbaseIn, MatrixStack matrixStackIn, float partialTickTime) {
+        matrixStackIn.scale(1.3F, 1.4F, 1.3F);
+        super.preRenderCallback(entitylivingbaseIn, matrixStackIn, partialTickTime);
     }
 
     @Override

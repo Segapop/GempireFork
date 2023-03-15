@@ -27,6 +27,7 @@ public class RenderDemantoid extends MobRenderer<EntityDemantoid, ModelGarnet<En
 
     @Override
     protected void preRenderCallback(EntityDemantoid entitylivingbaseIn, MatrixStack matrixStackIn, float partialTickTime) {
+        matrixStackIn.scale(1.2F, 1.3F, 1.2F);
         super.preRenderCallback(entitylivingbaseIn, matrixStackIn, partialTickTime);
     }
 
