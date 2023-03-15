@@ -7,12 +7,14 @@ import com.gempire.networking.C2SRequestInject;
 import com.gempire.networking.C2SRequestUpdateInjectorValves;
 import com.gempire.systems.machine.gui.EnergyMeter;
 import com.gempire.systems.machine.gui.MeterSize;
+import com.gempire.systems.machine.interfaces.IPowerProvider;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.gui.widget.button.ImageButton;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.fluid.Fluids;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraftforge.api.distmarker.Dist;
@@ -159,6 +161,5 @@ public class InjectorScreen extends ContainerScreen<InjectorContainer> {
             this.minecraft.getTextureManager().bindTexture(InjectorScreen.HALO_GUI_WHITE);
             this.blit(matrixStack, x, y, 0, 0, this.width, this.height);
         }
-        EnergyMeter.RenderBattery(this, matrixStack, container.injector, container.injector, x + 97, y + 32, MeterSize.INJECTOR);
     }
 }

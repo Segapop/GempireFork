@@ -6,8 +6,6 @@ import com.gempire.init.ModPacketHandler;
 import com.gempire.networking.C2SRequestDumpFluidsInjector;
 import com.gempire.networking.C2SRequestInject;
 import com.gempire.networking.C2SRequestUpdateInjectorValves;
-import com.gempire.systems.machine.gui.EnergyMeter;
-import com.gempire.systems.machine.gui.MeterSize;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
@@ -53,10 +51,9 @@ public class ShellScreen extends ContainerScreen<ShellContainer> {
         int y = (this.height - this.ySize) / 2;
         this.minecraft.getTextureManager().bindTexture(ShellScreen.GUI);
         this.blit(matrixStack, x, y, 0, 0, this.xSize, this.ySize);
-        if(this.container.shell.essenceMarker){
+        if(this.container.shell.waterlogged){
             this.minecraft.getTextureManager().bindTexture(ShellScreen.LIGHT);
             this.blit(matrixStack, x, y, 0, 0, this.xSize, this.ySize);
         }
-        EnergyMeter.RenderBattery(this, matrixStack, container.shell, container.shell, x + 8, y + 4, MeterSize.NORMAL);
     }
 }
