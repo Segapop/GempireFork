@@ -21,7 +21,7 @@ public class GempireStructureGeneration {
         if(types.contains(BiomeDictionary.Type.PLAINS)) {
             List<Supplier<StructureFeature<?, ?>>> structures = event.getGeneration().getStructures();
 
-            structures.add(() -> ModStructures.RUINEDYELLOWDOME.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
+            //structures.add(() -> ModStructures.RUINEDYELLOWDOME.get().withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
         }
     }
 }
