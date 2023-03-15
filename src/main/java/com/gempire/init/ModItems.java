@@ -292,7 +292,6 @@ public class ModItems {
                     new Item.Properties().group(ModItemGroup.BLOCKS).maxStackSize(64)
             )
     );
-
     /*public static final RegistryObject<Item> TEST_CONTAINER_BLOCK_ITEM = ITEMS.register("test_container_block", () ->
             new BlockItem(
                     ModBlocks.TEST_CONTAINER_BLOCK.get(),
@@ -734,4 +733,17 @@ public class ModItems {
             new ItemGem(new Item.Properties().group(ModItemGroup.GEMSTONES).maxStackSize(1).isImmuneToFire()));
     public static final RegistryObject<Item> PINK_TOPAZ_GEM = ITEMS.register("topaz_gem_6", () ->
             new ItemGem(new Item.Properties().group(ModItemGroup.GEMSTONES).maxStackSize(1).isImmuneToFire()));
+
+    public static final RegistryObject<Item> WHITE_DESTABILIZER = ITEMS.register("white_destabilizer", () ->
+            new Item(new Item.Properties().group(ModItemGroup.ITEMS).maxStackSize(1)));
+    public static final RegistryObject<Item> YELLOW_DESTABILIZER = ITEMS.register("yellow_destabilizer", () ->
+            new Item(new Item.Properties().group(ModItemGroup.ITEMS).maxStackSize(1)));
+    public static final RegistryObject<Item> BLUE_DESTABILIZER = ITEMS.register("blue_destabilizer", () ->
+            new Item(new Item.Properties().group(ModItemGroup.ITEMS).maxStackSize(1)));
+    public static final RegistryObject<Item> PINK_DESTABILIZER = ITEMS.register("pink_destabilizer", () ->
+            new Item(new Item.Properties().group(ModItemGroup.ITEMS).maxStackSize(1)));
+
+
+    public static final RegistryObject<Item> PINK_REJUVENATOR = ITEMS.register("pink_rejuvenator", () ->
+            new Item(new Item.Properties().group(ModItemGroup.ITEMS).maxStackSize(1)));
 }
