@@ -51,7 +51,7 @@ public class EntityQuartz extends AbstractQuartz {
 
     @Override
     public boolean hasMarkings2() {
-        return false;
+        return (getSkinColorVariant() == 2 || getSkinColorVariant() == 3 || getSkinColorVariant() == 12 || getSkinColorVariant() == 13 || getSkinColorVariant() == 17);
     }
 
     @Override
@@ -61,7 +61,7 @@ public class EntityQuartz extends AbstractQuartz {
 
     @Override
     public int maxMarkings2() {
-        return 0;
+        return 1;
     }
 
     @Override

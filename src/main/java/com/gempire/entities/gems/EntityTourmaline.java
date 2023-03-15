@@ -49,12 +49,10 @@ public class EntityTourmaline extends EntityVaryingGem {
 
     @Override
     public GemPlacements[] getPlacements() {
-        return new GemPlacements[]{
-                GemPlacements.TOP_OF_HEAD, GemPlacements.FOREHEAD, GemPlacements.BACK_OF_HEAD, GemPlacements.LEFT_EYE, GemPlacements.RIGHT_EYE, GemPlacements.NOSE,
-                GemPlacements.LEFT_CHEEK, GemPlacements.RIGHT_CHEEK, GemPlacements.LEFT_EAR, GemPlacements.RIGHT_EAR, GemPlacements.CHEST, GemPlacements.BACK, GemPlacements.BELLY,
-                GemPlacements.LEFT_SHOULDER, GemPlacements.RIGHT_SHOULDER, GemPlacements.LEFT_HAND, GemPlacements.RIGHT_HAND, GemPlacements.LEFT_PALM, GemPlacements.RIGHT_PALM,
-                GemPlacements.LEFT_THIGH, GemPlacements.RIGHT_THIGH, GemPlacements.LEFT_ANKLE, GemPlacements.RIGHT_ANKLE
-        };
+        return new GemPlacements[] {
+                GemPlacements.TOP_OF_HEAD, GemPlacements.FOREHEAD, GemPlacements.BACK_OF_HEAD, GemPlacements.LEFT_EYE, GemPlacements.RIGHT_EYE, GemPlacements.NOSE, GemPlacements.LEFT_CHEEK, GemPlacements.RIGHT_CHEEK, GemPlacements.LEFT_EAR, GemPlacements.RIGHT_EAR,
+                GemPlacements.CHEST, GemPlacements.BACK, GemPlacements.BELLY, GemPlacements.LEFT_SHOULDER, GemPlacements.RIGHT_SHOULDER, GemPlacements.LEFT_HAND, GemPlacements.RIGHT_HAND, GemPlacements.LEFT_PALM, GemPlacements.RIGHT_PALM, GemPlacements.LEFT_THIGH,
+                GemPlacements.RIGHT_THIGH, GemPlacements.LEFT_KNEE, GemPlacements.RIGHT_KNEE, GemPlacements.LEFT_ANKLE, GemPlacements.RIGHT_ANKLE };
     }
 
     @Override
@@ -64,9 +62,8 @@ public class EntityTourmaline extends EntityVaryingGem {
 
     @Override
     public boolean hasMarkings2() {
-        return false;
+        return (getSkinColorVariant() == 16);
     }
-
     @Override
     public int maxMarkings() {
         return 1;
@@ -74,7 +71,7 @@ public class EntityTourmaline extends EntityVaryingGem {
 
     @Override
     public int maxMarkings2() {
-        return 0;
+        return 1;
     }
 
     @Override
@@ -84,7 +81,7 @@ public class EntityTourmaline extends EntityVaryingGem {
 
     @Override
     public int generateHairVariant() {
-        return this.rand.nextInt(1);
+        return 0;
     }
 
     @Override
@@ -163,7 +160,7 @@ public class EntityTourmaline extends EntityVaryingGem {
 
     @Override
     public boolean hasOutfitPlacementVariant() {
-        return true;
+        return false;
     }
 
     @Override
@@ -217,18 +214,12 @@ public class EntityTourmaline extends EntityVaryingGem {
         };
     }
 
-    public int generateOutfitVariant(){
-        return this.rand.nextInt(4);
+    public int generateOutfitVariant() {
+        return this.rand.nextInt(3);
     }
 
-    public int generateInsigniaVariant(){
-        if (this.getGemPlacement() == 11) {
-            return this.getGemPlacement() != 11 ? this.getOutfitVariant() : 4;
-        } else if (this.getGemPlacement() == 17) {
-            return this.getGemPlacement() != 17 ? this.getOutfitVariant() : 5;
-        } else {
-            return this.getOutfitVariant();
-        }
+    public int generateInsigniaVariant() {
+        return getOutfitVariant();
     }
 
     @Override

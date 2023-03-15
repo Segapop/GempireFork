@@ -51,13 +51,12 @@ public class EntityHessonite extends EntityGem {
 
     @Override
     public GemPlacements[] getPlacements() {
-        return new GemPlacements[]{
-                GemPlacements.FOREHEAD, GemPlacements.LEFT_EYE, GemPlacements.RIGHT_EYE, GemPlacements.NOSE,
-                GemPlacements.LEFT_CHEEK, GemPlacements.RIGHT_CHEEK, GemPlacements.MOUTH, GemPlacements.CHEST, GemPlacements.BACK, GemPlacements.BELLY,
-                GemPlacements.LEFT_SHOULDER, GemPlacements.RIGHT_SHOULDER, GemPlacements.LEFT_HAND, GemPlacements.RIGHT_HAND, GemPlacements.LEFT_PALM, GemPlacements.RIGHT_PALM,
-                GemPlacements.LEFT_THIGH, GemPlacements.RIGHT_THIGH, GemPlacements.LEFT_KNEE, GemPlacements.RIGHT_KNEE, GemPlacements.LEFT_ANKLE, GemPlacements.RIGHT_ANKLE
-        };
+        return new GemPlacements[] {
+                GemPlacements.FOREHEAD, GemPlacements.LEFT_EYE, GemPlacements.RIGHT_EYE, GemPlacements.NOSE, GemPlacements.LEFT_CHEEK, GemPlacements.RIGHT_CHEEK, GemPlacements.MOUTH, GemPlacements.CHEST, GemPlacements.BACK, GemPlacements.BELLY,
+                GemPlacements.LEFT_SHOULDER, GemPlacements.RIGHT_SHOULDER, GemPlacements.LEFT_HAND, GemPlacements.RIGHT_HAND, GemPlacements.LEFT_PALM, GemPlacements.RIGHT_PALM, GemPlacements.LEFT_THIGH, GemPlacements.RIGHT_THIGH, GemPlacements.LEFT_KNEE, GemPlacements.RIGHT_KNEE,
+                GemPlacements.LEFT_ANKLE, GemPlacements.RIGHT_ANKLE };
     }
+
 
     @Override
     public int generateHairVariant() {
@@ -127,14 +126,13 @@ public class EntityHessonite extends EntityGem {
         return false;
     }
 
-    public int generateOutfitVariant(){
+    public int generateOutfitVariant() {
         return this.rand.nextInt(3);
     }
 
-    public int generateInsigniaVariant(){
-            return this.getOutfitVariant();
+    public int generateInsigniaVariant() {
+        return getOutfitVariant();
     }
-
     @Override
     public int baseFocus() {
         return 7;

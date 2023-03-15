@@ -69,6 +69,23 @@ public class EntityNephrite extends EntityGem {
     }
 
     @Override
+    public boolean hasMarkings() {
+        return true;
+    }
+    @Override
+    public boolean hasMarkings2() {
+        return false;
+    }
+    @Override
+    public int maxMarkings() {
+        return 1;
+    }
+    @Override
+
+    public int maxMarkings2() {
+        return 0;
+    }
+    @Override
     public int generateHairVariant() {
         return this.rand.nextInt(10);
     }

@@ -75,7 +75,7 @@ public class ModEntities {
 
     public static final RegistryObject<EntityType<EntityTopaz>> TOPAZ = ENTITIES.register("topaz",
             () -> EntityType.Builder.create(EntityTopaz::new, EntityClassification.CREATURE)
-                    .size(.95f, 2.5f) // Hitbox Size
+                    .size(.95f, 1.8f) // Hitbox Size
                     .build(new ResourceLocation(Gempire.MODID, "topaz").toString()));
 
     public static final RegistryObject<EntityType<EntityObsidian>> OBSIDIAN = ENTITIES.register("obsidian",
@@ -95,7 +95,7 @@ public class ModEntities {
 
     public static final RegistryObject<EntityType<EntitySpodumene>> SPODUMENE = ENTITIES.register("spodumene",
             () -> EntityType.Builder.create(EntitySpodumene::new, EntityClassification.CREATURE)
-                    .size(.75f, 1.99f) // Hitbox Size
+                    .size(.75f, 3.0f) // Hitbox Size
                     .build(new ResourceLocation(Gempire.MODID, "spodumene").toString()));
 
     public static final RegistryObject<EntityType<EntityZircon>> ZIRCON = ENTITIES.register("zircon",
@@ -105,47 +105,47 @@ public class ModEntities {
 
     public static final RegistryObject<EntityType<EntityAquamarine>> AQUAMARINE = ENTITIES.register("aquamarine",
             () -> EntityType.Builder.create(EntityAquamarine::new, EntityClassification.CREATURE)
-                    .size(.75f, 1.5f) // Hitbox Size
+                    .size(.75f, 0.9f) // Hitbox Size
                     .build(new ResourceLocation(Gempire.MODID, "aquamarine").toString()));
 
     public static final RegistryObject<EntityType<EntityBismuth>> BISMUTH = ENTITIES.register("bismuth",
             () -> EntityType.Builder.create(EntityBismuth::new, EntityClassification.CREATURE)
-                    .size(.75f, 1.5f) // Hitbox Size
+                    .size(.95f, 2.2f) // Hitbox Size
                     .build(new ResourceLocation(Gempire.MODID, "bismuth").toString()));
 
     public static final RegistryObject<EntityType<EntityBixbite>> BIXBITE = ENTITIES.register("bixbite",
             () -> EntityType.Builder.create(EntityBixbite::new, EntityClassification.CREATURE)
-                    .size(.75f, 1.5f) // Hitbox Size
+                    .size(.75f, 2.3f) // Hitbox Size
                     .build(new ResourceLocation(Gempire.MODID, "bixbite").toString()));
 
     public static final RegistryObject<EntityType<EntityDemantoid>> DEMANTOID = ENTITIES.register("demantoid",
             () -> EntityType.Builder.create(EntityDemantoid::new, EntityClassification.CREATURE)
-                    .size(.75f, 1.5f) // Hitbox Size
+                    .size(.75f, 3f) // Hitbox Size
                     .build(new ResourceLocation(Gempire.MODID, "demantoid").toString()));
 
     public static final RegistryObject<EntityType<EntityEmerald>> EMERALD = ENTITIES.register("emerald",
             () -> EntityType.Builder.create(EntityEmerald::new, EntityClassification.CREATURE)
-                    .size(.75f, 1.5f) // Hitbox Size
+                    .size(.75f, 3f) // Hitbox Size
                     .build(new ResourceLocation(Gempire.MODID, "emerald").toString()));
 
     public static final RegistryObject<EntityType<EntityHessonite>> HESSONITE = ENTITIES.register("hessonite",
             () -> EntityType.Builder.create(EntityHessonite::new, EntityClassification.CREATURE)
-                    .size(.75f, 1.5f) // Hitbox Size
+                    .size(.75f, 3f) // Hitbox Size
                     .build(new ResourceLocation(Gempire.MODID, "hessonite").toString()));
 
     public static final RegistryObject<EntityType<EntityLapis>> LAPIS = ENTITIES.register("lapis",
             () -> EntityType.Builder.create(EntityLapis::new, EntityClassification.CREATURE)
-                    .size(.75f, 1.5f) // Hitbox Size
+                    .size(.75f, 1.8f) // Hitbox Size
                     .build(new ResourceLocation(Gempire.MODID, "lapis").toString()));
 
     public static final RegistryObject<EntityType<EntityLarimar>> LARIMAR = ENTITIES.register("larimar",
             () -> EntityType.Builder.create(EntityLarimar::new, EntityClassification.CREATURE)
-                    .size(.75f, 1.5f) // Hitbox Size
+                    .size(.75f, 1.99f) // Hitbox Size
                     .build(new ResourceLocation(Gempire.MODID, "larimar").toString()));
 
     public static final RegistryObject<EntityType<EntityMelanite>> MELANITE = ENTITIES.register("melanite",
             () -> EntityType.Builder.create(EntityMelanite::new, EntityClassification.CREATURE)
-                    .size(.75f, 1.5f) // Hitbox Size
+                    .size(.75f, 3f) // Hitbox Size
                     .build(new ResourceLocation(Gempire.MODID, "melanite").toString()));
 
     public static final RegistryObject<EntityType<EntityMorganite>> MORGANITE = ENTITIES.register("morganite",
@@ -155,17 +155,17 @@ public class ModEntities {
 
     public static final RegistryObject<EntityType<EntityPeridot>> PERIDOT = ENTITIES.register("peridot",
             () -> EntityType.Builder.create(EntityPeridot::new, EntityClassification.CREATURE)
-                    .size(.75f, 1.5f) // Hitbox Size
+                    .size(.75f, 2.4f) // Hitbox Size
                     .build(new ResourceLocation(Gempire.MODID, "peridot").toString()));
 
     public static final RegistryObject<EntityType<EntityPyrope>> PYROPE = ENTITIES.register("pyrope",
             () -> EntityType.Builder.create(EntityPyrope::new, EntityClassification.CREATURE)
-                    .size(.75f, 1.5f) // Hitbox Size
+                    .size(.75f, 3f) // Hitbox Size
                     .build(new ResourceLocation(Gempire.MODID, "pyrope").toString()));
 
     public static final RegistryObject<EntityType<EntityRutile>> RUTILE = ENTITIES.register("rutile",
             () -> EntityType.Builder.create(EntityRutile::new, EntityClassification.CREATURE)
-                    .size(.75f, 1.5f) // Hitbox Size
+                    .size(.75f, 2.2f) // Hitbox Size
                     .build(new ResourceLocation(Gempire.MODID, "rutile").toString()));
 
     public static final RegistryObject<EntityType<EntitySpinel>> SPINEL = ENTITIES.register("spinel",
@@ -175,7 +175,7 @@ public class ModEntities {
 
     public static final RegistryObject<EntityType<EntityTourmaline>> TOURMALINE = ENTITIES.register("tourmaline",
             () -> EntityType.Builder.create(EntityTourmaline::new, EntityClassification.CREATURE)
-                    .size(.75f, 1.5f) // Hitbox Size
+                    .size(.75f, 2.2f) // Hitbox Size
                     .build(new ResourceLocation(Gempire.MODID, "tourmaline").toString()));
 
     public static final RegistryObject<EntityType<IceShardEntity>> ICE_SHARD = ENTITIES.register("ice_shard", () -> {
