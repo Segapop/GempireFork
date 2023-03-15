@@ -2,6 +2,7 @@ package com.gempire.client.entity.render;
 
 import com.gempire.Gempire;
 import com.gempire.client.entity.model.ModelRuby;
+import com.gempire.client.entity.model.ModelTourmaline;
 import com.gempire.client.entity.render.layers.*;
 import com.gempire.entities.gems.EntityTourmaline;
 import com.mojang.blaze3d.matrix.MatrixStack;
@@ -11,10 +12,10 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 
-public class RenderTourmaline extends MobRenderer<EntityTourmaline, ModelRuby<EntityTourmaline>> {
+public class RenderTourmaline extends MobRenderer<EntityTourmaline, ModelTourmaline<EntityTourmaline>> {
 
     public RenderTourmaline(EntityRendererManager renderManagerIn) {
-        super(renderManagerIn, new ModelRuby<>(), .25f);
+        super(renderManagerIn, new ModelTourmaline<>(), .25f);
         this.addLayer(new SkinLayer(this));
         this.addLayer(new FaceLayer(this));
         this.addLayer(new MarkingLayer(this));
@@ -26,7 +27,6 @@ public class RenderTourmaline extends MobRenderer<EntityTourmaline, ModelRuby<En
 
     @Override
     protected void preRenderCallback(EntityTourmaline entitylivingbaseIn, MatrixStack matrixStackIn, float partialTickTime) {
-        matrixStackIn.scale(.8f, .85f, .8f);
         super.preRenderCallback(entitylivingbaseIn, matrixStackIn, partialTickTime);
     }
 

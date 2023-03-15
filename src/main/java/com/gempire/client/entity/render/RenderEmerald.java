@@ -1,6 +1,7 @@
 package com.gempire.client.entity.render;
 
 import com.gempire.Gempire;
+import com.gempire.client.entity.model.ModelEmerald;
 import com.gempire.client.entity.model.ModelRuby;
 import com.gempire.client.entity.render.layers.*;
 import com.gempire.entities.gems.EntityAquamarine;
@@ -12,10 +13,10 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 
-public class RenderEmerald extends MobRenderer<EntityEmerald, ModelRuby<EntityEmerald>> {
+public class RenderEmerald extends MobRenderer<EntityEmerald, ModelEmerald<EntityEmerald>> {
 
     public RenderEmerald(EntityRendererManager renderManagerIn) {
-        super(renderManagerIn, new ModelRuby<>(), .25f);
+        super(renderManagerIn, new ModelEmerald<>(), .25f);
         this.addLayer(new SkinLayer(this));
         this.addLayer(new FaceLayer(this));
         this.addLayer(new HairLayer(this));
@@ -26,7 +27,6 @@ public class RenderEmerald extends MobRenderer<EntityEmerald, ModelRuby<EntityEm
 
     @Override
     protected void preRenderCallback(EntityEmerald entitylivingbaseIn, MatrixStack matrixStackIn, float partialTickTime) {
-        matrixStackIn.scale(.8f, .85f, .8f);
         super.preRenderCallback(entitylivingbaseIn, matrixStackIn, partialTickTime);
     }
 
