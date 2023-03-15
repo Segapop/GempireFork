@@ -48,7 +48,7 @@ public class EntityBismuth extends EntityGem {
 
     @Override
     public int generateSkinVariant() {
-        return 0;
+        return this.getGemPlacement() == 11 ? 11 : 0;
     }
 
     @Override
