@@ -162,6 +162,9 @@ public class Gempire
         ModAbilities.registerAbilities();
         ModEnchants.registerVanillaEnchantments();
         ModEnchants.registerItemDiscounts();
+        event.enqueueWork(() -> {
+            ModStructures.setupStructures();
+        });
     }
 
     @SuppressWarnings("warning")

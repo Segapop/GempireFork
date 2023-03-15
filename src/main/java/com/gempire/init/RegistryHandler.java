@@ -1,11 +1,5 @@
 package com.gempire.init;
 
-import com.gempire.Gempire;
-import com.gempire.fluids.NewFluidTest;
-import com.gempire.items.ItemGem;
-import com.gempire.util.GemPlacements;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 public class RegistryHandler {
@@ -19,6 +13,7 @@ public class RegistryHandler {
         ModTE.TILE_ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModContainers.CONTAINERS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModEntities.ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModStructures.STRUCTURES.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
 }
