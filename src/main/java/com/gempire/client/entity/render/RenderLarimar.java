@@ -1,6 +1,7 @@
 package com.gempire.client.entity.render;
 
 import com.gempire.Gempire;
+import com.gempire.client.entity.model.ModelLarimar;
 import com.gempire.client.entity.model.ModelRuby;
 import com.gempire.client.entity.render.layers.*;
 import com.gempire.entities.gems.EntityLarimar;
@@ -11,10 +12,10 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 
-public class RenderLarimar extends MobRenderer<EntityLarimar, ModelRuby<EntityLarimar>> {
+public class RenderLarimar extends MobRenderer<EntityLarimar, ModelLarimar<EntityLarimar>> {
 
     public RenderLarimar(EntityRendererManager renderManagerIn) {
-        super(renderManagerIn, new ModelRuby<>(), .25f);
+        super(renderManagerIn, new ModelLarimar<>(), .25f);
         this.addLayer(new SkinLayer(this));
         this.addLayer(new FaceLayer(this));
         this.addLayer(new HairLayer(this));
@@ -25,7 +26,6 @@ public class RenderLarimar extends MobRenderer<EntityLarimar, ModelRuby<EntityLa
 
     @Override
     protected void preRenderCallback(EntityLarimar entitylivingbaseIn, MatrixStack matrixStackIn, float partialTickTime) {
-        matrixStackIn.scale(.8f, .85f, .8f);
         super.preRenderCallback(entitylivingbaseIn, matrixStackIn, partialTickTime);
     }
 

@@ -1,6 +1,7 @@
 package com.gempire.client.entity.render;
 
 import com.gempire.Gempire;
+import com.gempire.client.entity.model.ModelAquamarine;
 import com.gempire.client.entity.model.ModelRuby;
 import com.gempire.client.entity.render.layers.*;
 import com.gempire.entities.gems.EntityAquamarine;
@@ -11,10 +12,10 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 
-public class RenderAquamarine extends MobRenderer<EntityAquamarine, ModelRuby<EntityAquamarine>> {
+public class RenderAquamarine extends MobRenderer<EntityAquamarine, ModelAquamarine<EntityAquamarine>> {
 
     public RenderAquamarine(EntityRendererManager renderManagerIn) {
-        super(renderManagerIn, new ModelRuby<>(), .25f);
+        super(renderManagerIn, new ModelAquamarine<>(), .25f);
         this.addLayer(new SkinLayer(this));
         this.addLayer(new FaceLayer(this));
         this.addLayer(new HairLayer(this));
