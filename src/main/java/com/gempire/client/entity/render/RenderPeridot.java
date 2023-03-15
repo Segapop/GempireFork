@@ -1,7 +1,7 @@
 package com.gempire.client.entity.render;
 
 import com.gempire.Gempire;
-import com.gempire.client.entity.model.ModelRuby;
+import com.gempire.client.entity.model.ModelPeridot;
 import com.gempire.client.entity.render.layers.*;
 import com.gempire.entities.gems.EntityAquamarine;
 import com.gempire.entities.gems.EntityPeridot;
@@ -12,10 +12,10 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 
-public class RenderPeridot extends MobRenderer<EntityPeridot, ModelRuby<EntityPeridot>> {
+public class RenderPeridot extends MobRenderer<EntityPeridot, ModelPeridot<EntityPeridot>> {
 
     public RenderPeridot(EntityRendererManager renderManagerIn) {
-        super(renderManagerIn, new ModelRuby<>(), .25f);
+        super(renderManagerIn, new ModelPeridot<>(), .25f);
         this.addLayer(new SkinLayer(this));
         this.addLayer(new FaceLayer(this));
         this.addLayer(new HairLayer(this));
