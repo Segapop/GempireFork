@@ -334,13 +334,13 @@ public class ModItems {
                     new Item.Properties().group(ModItemGroup.BLOCKS)
             )
     );
-    public static final RegistryObject<Item> CHISELED_RUINED_MARBLE_BLOCK = ITEMS.register("chieled_ruined_marble_brick", () ->
+    public static final RegistryObject<Item> CHISELED_RUINED_MARBLE_BLOCK = ITEMS.register("chiseled_ruined_marble_block", () ->
             new BlockItem(
                     ModBlocks.CHISELED_RUINED_MARBLE_BLOCK.get(),
                     new Item.Properties().group(ModItemGroup.BLOCKS)
             )
     );
-    public static final RegistryObject<Item> SMOOTH_RUINED_MARBLE_BLOCK = ITEMS.register("smooth_ruined_marble_brick", () ->
+    public static final RegistryObject<Item> SMOOTH_RUINED_MARBLE_BLOCK = ITEMS.register("smooth_ruined_marble_block", () ->
             new BlockItem(
                     ModBlocks.SMOOTH_RUINED_MARBLE_BLOCK.get(),
                     new Item.Properties().group(ModItemGroup.BLOCKS)
