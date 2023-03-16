@@ -59,8 +59,8 @@ public class GempireWorldEvents {
             // Adding our Structure to the Map
             Map<Structure<?>, StructureSeparationSettings> tempMap =
                     new HashMap<>(serverWorld.getChunkProvider().generator.func_235957_b_().func_236195_a_());
-            tempMap.putIfAbsent(ModStructures.RUINEDYELLOWDOME.get(),
-                    DimensionStructuresSettings.field_236191_b_.get(ModStructures.RUINEDYELLOWDOME.get()));
+            tempMap.putIfAbsent(ModStructures.RUIN.get(),
+                    DimensionStructuresSettings.field_236191_b_.get(ModStructures.RUIN.get()));
             serverWorld.getChunkProvider().generator.func_235957_b_().field_236193_d_ = tempMap;
         }
     }

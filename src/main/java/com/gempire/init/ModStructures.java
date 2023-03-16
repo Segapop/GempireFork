@@ -1,7 +1,7 @@
 package com.gempire.init;
 
 import com.gempire.Gempire;
-import com.gempire.world.structures.RuinedYellowDomeStructure;
+import com.gempire.world.structures.RuinStructure;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.util.registry.WorldGenRegistries;
@@ -22,15 +22,15 @@ public class ModStructures {
     public static final DeferredRegister<Structure<?>> STRUCTURES =
             DeferredRegister.create(ForgeRegistries.STRUCTURE_FEATURES, Gempire.MODID);
 
-    public static final RegistryObject<Structure<NoFeatureConfig>> RUINEDYELLOWDOME =
-            STRUCTURES.register("ruined_yellow_dome", RuinedYellowDomeStructure::new);
+    public static final RegistryObject<Structure<NoFeatureConfig>> RUIN =
+            STRUCTURES.register("ruin", RuinStructure::new);
 
     /* average distance apart in chunks between spawn attempts */
     /* minimum distance apart in chunks between spawn attempts. MUST BE LESS THAN ABOVE VALUE*/
     /* this modifies the seed of the structure so no two structures always spawn over each-other.
     Make this large and unique. */
     public static void setupStructures() {
-        setupMapSpacingAndLand(RUINEDYELLOWDOME.get(),
+        setupMapSpacingAndLand(RUIN.get(),
                 new StructureSeparationSettings(100,50, 1234567890),
                 true);
     }

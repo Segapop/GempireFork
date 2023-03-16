@@ -1,7 +1,6 @@
 package com.gempire.world.structures;
 
 import com.gempire.Gempire;
-import com.mojang.serialization.Codec;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SharedSeedRandom;
@@ -23,11 +22,9 @@ import net.minecraft.world.gen.feature.structure.Structure;
 import net.minecraft.world.gen.feature.structure.StructureStart;
 import net.minecraft.world.gen.feature.structure.VillageConfig;
 import net.minecraft.world.gen.feature.template.TemplateManager;
-import org.apache.logging.log4j.Level;
-import org.apache.logging.log4j.LogManager;
 
-public class RuinedYellowDomeStructure extends Structure<NoFeatureConfig> {
-    public RuinedYellowDomeStructure() {
+public class RuinStructure extends Structure<NoFeatureConfig> {
+    public RuinStructure() {
         super(NoFeatureConfig.field_236558_a_);
     }
 
@@ -52,7 +49,7 @@ public class RuinedYellowDomeStructure extends Structure<NoFeatureConfig> {
 
     @Override
     public IStartFactory<NoFeatureConfig> getStartFactory() {
-        return RuinedYellowDomeStructure.Start::new;
+        return RuinStructure.Start::new;
     }
 
     public static class Start extends StructureStart<NoFeatureConfig> {
@@ -73,7 +70,7 @@ public class RuinedYellowDomeStructure extends Structure<NoFeatureConfig> {
             //addpieces()
             JigsawManager.func_242837_a(dynamicRegistryManager,
                     new VillageConfig(() -> dynamicRegistryManager.getRegistry(Registry.JIGSAW_POOL_KEY)
-                            .getOrDefault(new ResourceLocation(Gempire.MODID, "ruined_yellow_dome/start_pool")),
+                            .getOrDefault(new ResourceLocation(Gempire.MODID, "ruin/start_pool")),
                             10), AbstractVillagePiece::new, chunkGenerator, templateManagerIn,
                     blockpos, this.components, this.rand,false,true);
 
@@ -81,11 +78,6 @@ public class RuinedYellowDomeStructure extends Structure<NoFeatureConfig> {
             this.components.forEach(piece -> piece.getBoundingBox().minY -= 1);
 
             this.recalculateStructureSize();
-
-            LogManager.getLogger().log(Level.DEBUG, "House at " +
-                    this.components.get(0).getBoundingBox().minX + " " +
-                    this.components.get(0).getBoundingBox().minY + " " +
-                    this.components.get(0).getBoundingBox().minZ);
         }
     }
 }
