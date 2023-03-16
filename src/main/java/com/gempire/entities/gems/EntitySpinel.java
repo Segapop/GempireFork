@@ -79,16 +79,6 @@ public class EntitySpinel extends EntityVaryingGem {
     }
 
     @Override
-    public int generateInsigniaColor() {
-        return 6;
-    }
-
-    @Override
-    public int generateOutfitColor() {
-        return 2;
-    }
-
-    @Override
     public boolean hasOutfitPlacementVariant() {
         return false;
     }

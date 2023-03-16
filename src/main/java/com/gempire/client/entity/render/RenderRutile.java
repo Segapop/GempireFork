@@ -19,9 +19,10 @@ public class RenderRutile extends MobRenderer<EntityRutile, ModelRutile<EntityRu
         super(renderManagerIn, new ModelRutile<>(), .25f);
         this.addLayer(new SkinLayer(this));
         this.addLayer(new FaceLayer(this));
-        this.addLayer(new HairLayer(this));
         this.addLayer(new OutfitLayer(this));
         this.addLayer(new InsigniaLayer(this));
+        this.addLayer(new VisorLayer(this));
+        this.addLayer(new HairLayer(this));
         this.addLayer(new GemPlacementLayer(this));
     }
 
