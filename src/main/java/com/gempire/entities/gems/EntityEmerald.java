@@ -66,12 +66,12 @@ public class EntityEmerald extends EntityGem {
 
     @Override
     public int generateInsigniaColor() {
-        return 4;
+        return 13;
     }
 
     @Override
     public int generateOutfitColor() {
-        return 14;
+        return 13;
     }
 
     @Override

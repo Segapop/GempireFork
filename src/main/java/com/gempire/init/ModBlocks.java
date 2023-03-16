@@ -5,6 +5,7 @@ import com.gempire.blocks.*;
 import com.gempire.blocks.machine.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.FlowingFluidBlock;
+import net.minecraft.block.RotatedPillarBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.common.ToolType;
@@ -482,6 +483,37 @@ public class ModBlocks {
                     .sound(SoundType.STONE)
                     .harvestLevel(1)
                     .harvestTool(ToolType.PICKAXE)
+            )
+    );
+
+    public static final RegistryObject<Block> DRAINED_LOG = BLOCKS.register("drained_log", () ->
+            new RotatedPillarBlock(Block.Properties
+                    .create(Material.ROCK)
+                    .hardnessAndResistance(1.5f, 0.8f)
+                    .sound(SoundType.STONE)
+                    .harvestLevel(1)
+                    .harvestTool(ToolType.PICKAXE)
+                    .setRequiresTool()
+            )
+    );
+    public static final RegistryObject<Block> DRAINED_LOG_CRACKED = BLOCKS.register("drained_log_cracked", () ->
+            new RotatedPillarBlock(Block.Properties
+                    .create(Material.ROCK)
+                    .hardnessAndResistance(1.5f, 0.8f)
+                    .sound(SoundType.STONE)
+                    .harvestLevel(1)
+                    .harvestTool(ToolType.PICKAXE)
+                    .setRequiresTool()
+            )
+    );
+    public static final RegistryObject<Block> DRAINED_ICE = BLOCKS.register("drained_ice", () ->
+            new RotatedPillarBlock(Block.Properties
+                    .create(Material.PACKED_ICE)
+                    .hardnessAndResistance(1.5f, 0.8f)
+                    .sound(SoundType.GLASS)
+                    .harvestLevel(1)
+                    .harvestTool(ToolType.PICKAXE)
+                    .setRequiresTool()
             )
     );
 

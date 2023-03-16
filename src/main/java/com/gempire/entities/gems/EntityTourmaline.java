@@ -149,16 +149,6 @@ public class EntityTourmaline extends EntityVaryingGem {
     }
 
     @Override
-    public int generateInsigniaColor() {
-        return 5;
-    }
-
-    @Override
-    public int generateOutfitColor() {
-        return 13;
-    }
-
-    @Override
     public boolean hasOutfitPlacementVariant() {
         return false;
     }

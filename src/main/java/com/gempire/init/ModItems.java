@@ -130,7 +130,24 @@ public class ModItems {
     );
 
 
-
+    public static final RegistryObject<Item> DRAINED_LOG = ITEMS.register("drained_log", () ->
+            new BlockItem(
+                    ModBlocks.DRAINED_LOG.get(),
+                    new Item.Properties().group(ModItemGroup.BLOCKS)
+            )
+    );
+    public static final RegistryObject<Item> DRAINED_LOG_CRACKED = ITEMS.register("drained_log_cracked", () ->
+            new BlockItem(
+                    ModBlocks.DRAINED_LOG_CRACKED.get(),
+                    new Item.Properties().group(ModItemGroup.BLOCKS)
+            )
+    );
+    public static final RegistryObject<Item> DRAINED_ICE = ITEMS.register("drained_ice", () ->
+            new BlockItem(
+                    ModBlocks.DRAINED_ICE.get(),
+                    new Item.Properties().group(ModItemGroup.BLOCKS)
+            )
+    );
     public static final RegistryObject<Item> DRAINED_BLUE_SOIL = ITEMS.register("drained_blue_soil", () ->
             new BlockItem(
                     ModBlocks.DRAINED_BLUE_SOIL.get(),
@@ -255,6 +272,7 @@ public class ModItems {
                     new Item.Properties().group(ModItemGroup.BLOCKS)
             )
     );
+
 
     /*public static final RegistryObject<Item> GEM_SEED_BLOCK_ITEM = ITEMS.register("gem_seed_block", () ->
             new BlockItem(

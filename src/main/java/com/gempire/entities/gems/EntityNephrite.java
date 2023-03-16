@@ -92,7 +92,7 @@ public class EntityNephrite extends EntityGem {
 
     @Override
     public int generateInsigniaColor() {
-        return 6;
+        return 13;
     }
 
     @Override

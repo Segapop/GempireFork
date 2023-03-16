@@ -66,12 +66,12 @@ public class EntityBismuth extends EntityGem {
 
     @Override
     public int generateInsigniaColor() {
-        return 16;
+        return this.rand.nextInt(16);
     }
 
     @Override
     public int generateOutfitColor() {
-        return 10;
+        return this.rand.nextInt(16);
     }
 
     @Override
