@@ -65,7 +65,7 @@ public class ShellTE extends LockableLootTileEntity implements INamedContainerPr
     public boolean chromaConsumed = false;
     public boolean essenceConsumed = false;
     public int chromaColor = 0;
-    public int ticks = 0;
+    public int ticks = 1;
 
     public ShellTE() {
         super(ModTE.SHELL_TE.get());
@@ -105,7 +105,7 @@ public class ShellTE extends LockableLootTileEntity implements INamedContainerPr
     @Override
     public void tick() {
         if(this.getStackInSlot(ShellTE.PEARL_OUTPUT_SLOT_INDEX) == ItemStack.EMPTY) {
-            if(this.ticks % 1 == 0) {
+            if(this.ticks == 0) {
                 this.HandleGravelTick();
                 this.HandleSandTick();
                 this.HandleClayTick();
@@ -118,8 +118,9 @@ public class ShellTE extends LockableLootTileEntity implements INamedContainerPr
                 if (this.sandConsumed == ShellTE.MAX_SAND) {
                     this.world.setBlockState(this.getPos(), this.getBlockState().with(ShellBlock.STAGE, 2));
                 }
+                ticks = 1;
             }
-            if(this.ticks > 100){
+            if(this.ticks > 4){
                 this.ticks = 0;
             }
             else {

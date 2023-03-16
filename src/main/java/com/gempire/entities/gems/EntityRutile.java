@@ -59,7 +59,7 @@ public class EntityRutile extends EntityGem {
 
     @Override
     public int generateHairVariant() {
-        return 1;
+        return this.rand.nextInt(1);
     }
 
     @Override
