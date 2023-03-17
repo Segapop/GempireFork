@@ -217,4 +217,8 @@ public class EntityTourmaline extends EntityVaryingGem {
         return 7;
     }
 
+    @Override
+    public int generateVisorVariant() {
+        return this.rand.nextInt(2);
+    }
 }

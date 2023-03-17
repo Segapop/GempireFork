@@ -96,7 +96,7 @@ public abstract class EntityGem extends CreatureEntity implements IRangedAttackM
     public static final DataParameter<Integer> MARKING_2_VARIANT = EntityDataManager.<Integer>createKey(EntityGem.class, DataSerializers.VARINT);
     public static final DataParameter<Boolean> SADDLED = EntityDataManager.createKey(EntityGem.class, DataSerializers.BOOLEAN);
     public static final DataParameter<Integer> BOOST_TIME = EntityDataManager.createKey(EntityGem.class, DataSerializers.VARINT);
-    public static DataParameter<Boolean> HAS_VISOR = EntityDataManager.<Boolean>createKey(EntityGem.class, DataSerializers.BOOLEAN);
+    public static DataParameter<Integer> VISOR_VARIANT = EntityDataManager.<Integer>createKey(EntityGem.class, DataSerializers.VARINT);
     public ArrayList<Ability> ABILITY_POWERS = new ArrayList<>();
     public ArrayList<UUID> OWNERS = new ArrayList<>();
     public UUID FOLLOW_ID;
@@ -158,7 +158,7 @@ public abstract class EntityGem extends CreatureEntity implements IRangedAttackM
         this.dataManager.register(EntityGem.ABILITY_SLOTS, 1);
         this.dataManager.register(EntityGem.ABILITIES, "-1");
         this.dataManager.register(EntityGem.USES_AREA_ABILITIES, false);
-        this.dataManager.register(EntityGem.HAS_VISOR, false);
+        this.dataManager.register(EntityGem.VISOR_VARIANT, 0);
         this.dataManager.register(EntityGem.MARKING_COLOR, 0);
         this.dataManager.register(EntityGem.MARKING_VARIANT, 0);
         this.dataManager.register(EntityGem.MARKING_2_COLOR, 0);
@@ -186,6 +186,7 @@ public abstract class EntityGem extends CreatureEntity implements IRangedAttackM
         this.setOutfitColor(this.generateOutfitColor());
         this.setInsigniaVariant(this.generateInsigniaVariant());
         this.setInsigniaColor(this.generateInsigniaColor());
+        this.setVisorVariant(this.generateVisorVariant());
         this.setAbilitySlots(this.generateAbilitySlots());
         this.setAbilites(this.generateAbilities());
         this.setEmotional(this.generateIsEmotional());
@@ -231,6 +232,7 @@ public abstract class EntityGem extends CreatureEntity implements IRangedAttackM
         compound.putInt("outfitVariant", this.getOutfitVariant());
         compound.putInt("insigniaColor", this.getInsigniaColor());
         compound.putInt("insigniaVariant", this.getInsigniaVariant());
+        compound.putInt("VisorVariant", this.getVisorVariant());
         compound.putInt("abilitySlots", this.getAbilitySlots());
         compound.putBoolean("usesAreaAbility", this.usesAreaAbilities());
         compound.putIntArray("guardPos", this.GUARD_POS);
@@ -285,6 +287,7 @@ public abstract class EntityGem extends CreatureEntity implements IRangedAttackM
         this.setOutfitVariant(compound.getInt("outfitVariant"));
         this.setInsigniaColor(compound.getInt("insigniaColor"));
         this.setInsigniaVariant(compound.getInt("insigniaVariant"));
+        this.setVisorVariant(compound.getInt("visorVariant"));
         this.setAbilitySlots(compound.getInt("abilitySlots"));
         this.emotionMeter = compound.getByte("emotionMeter");
         this.focusLevel = compound.getInt("focusLevel");
@@ -921,6 +924,16 @@ public abstract class EntityGem extends CreatureEntity implements IRangedAttackM
 
     public abstract boolean hasSkinColorVariant();
 
+    public void setVisorVariant(int value){
+        this.dataManager.set(EntityGem.VISOR_VARIANT, value);
+    }
+
+    public int getVisorVariant(){
+        return this.dataManager.get(EntityGem.VISOR_VARIANT);
+    }
+
+    public abstract int generateVisorVariant();
+
     public boolean isEmotional(){
         return this.dataManager.get(EntityGem.EMOTIONAL);
     }
@@ -1124,18 +1137,6 @@ public abstract class EntityGem extends CreatureEntity implements IRangedAttackM
             }
         }
         return powers;
-    }
-
-    public void setHasVisor(boolean value){
-        this.dataManager.set(EntityGem.HAS_VISOR, value);
-    }
-
-    public boolean hasVisor(){
-        return this.dataManager.get(EntityGem.HAS_VISOR);
-    }
-
-    public boolean hasVisorCosmeticOnly(){
-        return false;
     }
 
     public boolean isFocused(){

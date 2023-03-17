@@ -137,4 +137,9 @@ public class EntityMica extends EntityStarterGem {
     public boolean getPlaying(){
         return playing;
     }
+
+    @Override
+    public int generateVisorVariant() {
+        return this.rand.nextInt(1);
+    }
 }

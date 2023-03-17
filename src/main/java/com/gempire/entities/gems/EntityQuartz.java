@@ -207,4 +207,8 @@ public class EntityQuartz extends AbstractQuartz {
                 17
         };
     }
+    @Override
+    public int generateVisorVariant() {
+        return this.rand.nextInt(2);
+    }
 }

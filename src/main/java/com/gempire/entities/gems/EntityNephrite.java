@@ -181,4 +181,9 @@ public class EntityNephrite extends EntityGem {
     public boolean canOpenInventoryByDefault() {
         return true;
     }
+
+    @Override
+    public int generateVisorVariant() {
+        return this.rand.nextInt(2);
+    }
 }

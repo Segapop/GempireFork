@@ -138,4 +138,8 @@ public class EntityMelanite extends EntityGem {
         return 7;
     }
 
+    @Override
+    public int generateVisorVariant() {
+        return this.rand.nextInt(6);
+    }
 }

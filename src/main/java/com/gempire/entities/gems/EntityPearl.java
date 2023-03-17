@@ -243,6 +243,11 @@ public class EntityPearl extends EntityVaryingGem {
     }
 
     @Override
+    public int generateVisorVariant() {
+        return this.rand.nextInt(2);
+    }
+
+    @Override
     public int baseFocus() {
         return 2;
     }
@@ -347,6 +352,25 @@ public class EntityPearl extends EntityVaryingGem {
         }
     }
 
+    public void CycleVisorForward(){
+        if(this.getVisorVariant() == this.getVisors() - 1){
+            this.setVisorVariant(0);
+        }
+        else{
+            this.setVisorVariant(this.getVisorVariant() + 1);
+        }
+    }
+
+    public void CycleVisorBackwards(){
+        if(this.getVisorVariant() == 0){
+            this.setVisorVariant(this.getVisors() - 1);
+        }
+        else{
+            this.setVisorVariant(this.getVisorVariant() - 1);
+        }
+    }
+
+
     public int getHairs(){
         return 34;
     }
@@ -357,6 +381,10 @@ public class EntityPearl extends EntityVaryingGem {
 
     public int getInsignias(){
         return 34;
+    }
+
+    public int getVisors(){
+        return 2;
     }
 
     @Override
@@ -459,4 +487,5 @@ public class EntityPearl extends EntityVaryingGem {
     public NonNullList<ItemStack> getItems4(){
         return this.items4;
     }
+
 }

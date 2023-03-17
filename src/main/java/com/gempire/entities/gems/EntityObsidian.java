@@ -174,4 +174,9 @@ public class EntityObsidian extends EntityGem implements IRideable {
     public boolean isImmuneToFire() {
         return true;
     }
+
+    @Override
+    public int generateVisorVariant() {
+        return this.rand.nextInt(2);
+    }
 }

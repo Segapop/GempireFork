@@ -192,8 +192,8 @@ public class EntityZircon extends EntityVaryingGem {
     }
 
     @Override
-    public boolean hasVisorCosmeticOnly() {
-        return true;
+    public int generateVisorVariant() {
+        return this.rand.nextInt(3);
     }
 
     public void CyclePageForward(){

@@ -21,8 +21,8 @@ public class RenderRuby extends MobRenderer<EntityRuby, ModelRuby<EntityRuby>> {
         this.addLayer(new FaceLayer(this));
         this.addLayer(new OutfitLayer(this));
         this.addLayer(new InsigniaLayer(this));
-        this.addLayer(new VisorLayer(this));
         this.addLayer(new HairLayer(this));
+        this.addLayer(new VisorLayer(this));
         this.addLayer(new GemPlacementLayer(this));
     }
 

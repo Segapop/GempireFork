@@ -166,7 +166,7 @@ public class EntityTopaz extends EntityVaryingGem {
     }
 
     @Override
-    public boolean hasVisorCosmeticOnly() {
-        return true;
+    public int generateVisorVariant() {
+        return this.rand.nextInt(2);
     }
 }

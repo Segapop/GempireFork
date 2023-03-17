@@ -199,4 +199,9 @@ public class EntityAgate extends AbstractQuartz {
     public int baseFocus() {
         return 1;
     }
+
+    @Override
+    public int generateVisorVariant() {
+        return this.rand.nextInt(2);
+    }
 }

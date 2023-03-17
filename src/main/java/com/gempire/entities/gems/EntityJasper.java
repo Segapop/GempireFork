@@ -213,4 +213,8 @@ public class EntityJasper extends AbstractQuartz {
                 17
         };
     }
+    @Override
+    public int generateVisorVariant() {
+        return this.rand.nextInt(2);
+    }
 }

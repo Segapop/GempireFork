@@ -111,4 +111,9 @@ public class EntityShale extends EntityStarterGem {
     public boolean canOpenInventoryByDefault() {
         return true;
     }
+
+    @Override
+    public int generateVisorVariant() {
+        return this.rand.nextInt(1);
+    }
 }

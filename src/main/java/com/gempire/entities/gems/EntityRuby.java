@@ -161,4 +161,11 @@ public class EntityRuby extends EntityGem {
     public int baseFocus() {
         return 7;
     }
+
+    @Override
+    public int generateVisorVariant(){
+        if (getHairVariant() == 2)
+            return 0;
+        return this.rand.nextInt(2);
+    }
 }

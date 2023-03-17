@@ -139,4 +139,8 @@ public class EntityPyrope extends EntityGem {
         return 7;
     }
 
+    @Override
+    public int generateVisorVariant() {
+        return this.rand.nextInt(6);
+    }
 }

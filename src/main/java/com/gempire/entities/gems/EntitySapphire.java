@@ -159,4 +159,9 @@ public class EntitySapphire extends EntityVaryingGem {
     public int getLuck() {
         return 4;
     }
+
+    @Override
+    public int generateVisorVariant() {
+        return this.rand.nextInt(1);
+    }
 }

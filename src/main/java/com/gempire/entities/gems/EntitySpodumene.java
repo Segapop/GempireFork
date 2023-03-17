@@ -161,4 +161,9 @@ public class EntitySpodumene extends EntityVaryingGem {
     public int getLuck() {
         return 3;
     }
+
+    @Override
+    public int generateVisorVariant() {
+        return this.rand.nextInt(1);
+    }
 }
